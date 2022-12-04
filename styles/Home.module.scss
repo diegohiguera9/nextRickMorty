@@ -2,7 +2,11 @@
   padding: 0px 80px;
 
   &__other{
-    color: red;
+    color: rgb(32, 35, 41);
+  }
+
+  @media (max-width: 600px){
+    padding: 0px 10px;
   }
 
 }
@@ -20,6 +24,79 @@
 
   &:hover{
     cursor: pointer;
+  }
+}
+
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 15px;
+  row-gap: 24px;
+}
+
+.cardConatiner{
+  display: flex;  
+  border-radius: 8px;
+  width: 600px;
+  max-width: 1000px;
+  flex-grow: 1;
+  aspect-ratio: 1.5; 
+  overflow: hidden;
+  background-color: rgb(32, 35, 41);
+  color: white;
+
+  @media (max-width: 600px){
+    width: 100%;
+    overflow: scroll;
+  }
+
+  &__image{
+    width: 250px;
+    aspect-ratio: 1.05;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    & img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 600px){
+      width: 150px;
+    }
+  }
+
+  &__text{
+    display: flex;
+    flex-flow: column;
+
+    & h2{
+      margin-bottom: 0;
+    }
+
+    & span{
+      margin-top: 20px;
+    }
+
+    & div:nth-child(4){
+      color: rgb(167, 162, 162);
+    }
+
+    & div:nth-child(7){
+      color: rgb(167, 162, 162);
+    }
+  }
+}
+
+.oneWraper{
+  padding: 0px 80px;
+  margin-top: 20px;
+
+  @media (max-width: 600px){
+    padding: 0px 10px;
   }
 }
 
